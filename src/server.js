@@ -21,14 +21,25 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
+/**
+ * @param(Routes)
+ * @description(Routes)
+ */
 // Routes
 app.use(authRoutes);
 
+/**
+ * @param(Catchalls)
+ * @description(Catchalls)
+ */
 // Catchalls
 app.use(notFound);
 app.use(errorHandler);
 
+/**
+ * @param(port)
+ * @description(port)
+ */
 module.exports = {
   server: app,
   startup: (port) => {

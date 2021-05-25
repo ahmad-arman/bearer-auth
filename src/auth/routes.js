@@ -11,6 +11,10 @@ const User = require('./models/users.js');
 const basicAuth = require('./middleware/basic.js')
 const bearerAuth = require('./middleware/bearer.js');
 const { token } = require('morgan');
+/**
+ * @param(singup)
+ * @description(route signup)
+ */
 
 authRouter.post('/signup', async (req, res, next) => {
   try {
@@ -26,6 +30,11 @@ authRouter.post('/signup', async (req, res, next) => {
   }
 });
 
+/**
+ * @param(singin)
+ * @description(route signin)
+ */
+
 authRouter.post('/signin', basicAuth, (req, res, next) => {
  
   res.cookie('token',req.user.token, { expires: new Date(Date.now() + 10000), httpOnly: true });
@@ -37,11 +46,20 @@ authRouter.post('/signin', basicAuth, (req, res, next) => {
   res.status(200).json(user);
 });
 
+/**
+ * @param(users)
+ * @description(route users)
+ */
+
 authRouter.get('/users', bearerAuth, async (req, res, next) => {
   const users = await User.find({});
   const list = users.map(user => user.username);
   res.status(200).json(list);
 });
+/**
+ * @param(secret)
+ * @description(route secret)
+ */
 
 authRouter.get('/secret', bearerAuth, async (req, res, next) => {
   
