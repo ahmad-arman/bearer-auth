@@ -12,10 +12,10 @@
 <hr>
 
 ## Links
-* (link heroku ready to test on postman)[https://ahmad-bearer-auth.herokuapp.com/api/v1/signup]
-* (link heroku ready to test on postman)[https://ahmad-bearer-auth.herokuapp.com/api/v1/signin]
+* (link heroku ready to test on postman)[https://ahmad-bearer-auth.herokuapp.com/signup]
+* (link heroku ready to test on postman)[https://ahmad-bearer-auth.herokuapp.com/signin]
 * [Submission Pull Request](https://github.com/ahmad-arman/bearer-auth/pull/1)
-* [Deployed App](https://ahmad-bearer-auth.herokuapp.com/)
+* [Deployed App](https://ahmad-bearer-auth.herokuapp.com/) 
 * [Error Report](https://github.com/ahmad-arman/bearer-auth/actions)
 <hr>
 
@@ -55,73 +55,65 @@ npm i "@code-fellows/supergoose": "^1.1.0",
 <br>
 
 - **Method** : post 
-- **CRUD Operation** :  http://localhost:3000/api/v1/signin
+- **CRUD Operation** :  https://ahmad-bearer-auth.herokuapp.com/signin
 - **Response Body**   : JSON
 ```
-[
-    {
+{
     "user": {
-        "_id": "60aae63fbcdc5d6877e732b8",
-        "username": "aaaa",
-        "password": "$2b$10$FiM6T4pbjS8DAYnz3JgDUeDVreQn5pZjgrIoTFqFwF0vg72dMXcBu",
+        "_id": "60ad7274327db30015ce844a",
+        "username": "ahmadadmain100",
+        "password": "$2b$10$NH.uC7huSLZyhEel7WMWK.Gjb2RAFlAzhm0utAoiY2hGxaY2wTDbS",
         "__v": 0
-    }
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFobWFkYWRtYWluMTAwIiwiaWF0IjoxNjIxOTc5OTU1LCJleHAiOjE2MjIwNjYzNTV9.HBTK8zqaYp3djNUAevFiczt5YjfPwXT1a2CEYBlG7OA"
 }
-]
 ```
 <br>
 
 - **Method** : POST 
-- **CRUD Operation** : http://localhost:3000/signup
+- **CRUD Operation** :https://ahmad-bearer-auth.herokuapp.com/signup
 - **Response Body**   : JSON
 ```
-    {
+   {
     "user": {
-        "_id": "60aae63fbcdc5d6877e732b8",
-        "username": "aaaa",
-        "password": "$2b$10$FiM6T4pbjS8DAYnz3JgDUeDVreQn5pZjgrIoTFqFwF0vg72dMXcBu",
+        "_id": "60ad7274327db30015ce844a",
+        "username": "ahmadadmain100",
+        "password": "$2b$10$NH.uC7huSLZyhEel7WMWK.Gjb2RAFlAzhm0utAoiY2hGxaY2wTDbS",
         "__v": 0
-    }
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFobWFkYWRtYWluMTAwIiwiaWF0IjoxNjIxOTc5NzY1LCJleHAiOjE2MjIwNjYxNjV9.HCo4Kr0OeVMFngY4hGqisaEo64nY4-z5_IagNautoSE"
 }
 ```
 <br>
 <br>
 
 - **Method** : GET 
-- **CRUD Operation** : http://localhost:3000/users
+- **CRUD Operation** : https://ahmad-bearer-auth.herokuapp.com/users
 - **Response Body**   : JSON
 ```
-    {
-    "user": {
-        "_id": "60aae63fbcdc5d6877e732b8",
-        "username": "aaaa",
-        "password": "$2b$10$FiM6T4pbjS8DAYnz3JgDUeDVreQn5pZjgrIoTFqFwF0vg72dMXcBu",
-        "__v": 0
-    }
-}
+  [
+    "aaaaaassssaa",
+    "ahmadarman",
+    "ahmdadmain",
+    "ahmadadmain",
+    "ahmadadmain100"
+]
 ```
 <br>
 
 
 - **Method** : GET 
-- **CRUD Operation** : http://localhost:3000/secret
-- **Response Body**   : JSON
+- **CRUD Operation** : https://ahmad-bearer-auth.herokuapp.com/secret
+- **Response Body**   : text
 ```
-    {
-    "user": {
-        "_id": "60aae63fbcdc5d6877e732b8",
-        "username": "aaaa",
-        "password": "$2b$10$FiM6T4pbjS8DAYnz3JgDUeDVreQn5pZjgrIoTFqFwF0vg72dMXcBu",
-        "__v": 0
-    }
-}
+Welcome to the secret area!
 ```
 <br>
 
 
 4. Test .
 
-* There's 2 test files . logger.test.js and server.test.js
+* There's 3 test files .basic-auth-middleware.test.js  ,,,, bearer-auth-middleware.test.js ,,,,, router.test.js
 * In terminal run :
 
 ```
